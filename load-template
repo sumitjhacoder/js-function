@@ -1,0 +1,9 @@
+//
+var loder='gif.png';
+//without request
+$(".checkData121").html(loder).load(baseurl2 + 'page.php');
+//with request
+$(".checkData121").html(loder).load(baseurl2 + 'page.php',{
+                'data1':dataV1,
+                'data2':dataV2,
+            });
