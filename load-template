@@ -7,3 +7,4 @@ $(".checkData121").html(loder).load(baseurl2 + 'page.php',{
                 'data1':dataV1,
                 'data2':dataV2,
             });
+//
