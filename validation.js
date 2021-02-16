@@ -1,3 +1,12 @@
+//Maximum 8 characters
+$("#yourFormId").submit(function() {
+    var inputVal= $("#yourTextBoxId").val();
+    var characterReg = /^([a-zA-Z0-9]{1,})$/;
+    if(!characterReg.test(inputVal)) {
+        $("#yourTextBoxId").after('<span class="error">Maximum 8 characters.</span>');
+    }
+});
+
 // make variable blank if undefined
 function str(variable) {
     if (typeof variable != 'undefined') {
