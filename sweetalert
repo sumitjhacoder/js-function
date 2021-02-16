@@ -1,0 +1,9 @@
+function smsWarning(){
+        swal({
+            title: "Warning",
+            text: "All field are mandatory",
+            type: "warning",
+            confirmButtonClass: 'btn-warning',
+            confirmButtonText: 'Ok'
+        });
+    }
