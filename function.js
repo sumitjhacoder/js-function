@@ -1,4 +1,8 @@
 <input style="width:16%;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Teacher name.." title="Type in a name"  style="float: left;margin-top: -35px;" >
+<input type='button' id='printpdf' class="btn btn-warning" value='Print PDF' onclick='printDiv();' style='margin-left:75%; margin-top:-20px; border-radius:4px;'>
+<div class="table-responsive" id="DivIdToPrint">
+    xxxx
+ </div>
 <script>
 /*
 var baseurl='<?php echo BASEURL ; ?>';
@@ -43,4 +47,17 @@ function myFunction() {
   }
 }
 //end
+//print div area
+function printDiv() {  
+    var divToPrint=document.getElementById('DivIdToPrint');  
+    var newWin=window.open('','Print-Window');  
+    newWin.document.open();  
+    newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');  
+    newWin.document.close();  
+    setTimeout(function(){
+        newWin.close();
+    },10);
+}
+//end
+
 </script>
