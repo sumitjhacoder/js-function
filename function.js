@@ -1,9 +1,11 @@
+<input style="width:16%;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Teacher name.." title="Type in a name"  style="float: left;margin-top: -35px;" >
+<script>
 /*
 var baseurl='<?php echo BASEURL ; ?>';
 var baseurl2='<?php echo BASEURL ; ?>2.6/online-test/services/';
 var loder='<div class="loading"><div class="ball"></div><b>Please wait ......</b></div>';
 */
-<script>
+
 //append select option jquery
 <!--get data class & subject --->
 var classSec2='<?php echo json_encode($classSec2Daata); ?>';
