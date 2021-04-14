@@ -1,4 +1,4 @@
-<!--
+<!-- html
 <input type="text" id="myInput" onkeyup="myFunction()" style="margin-left:5px !important;" class=" pull-right" placeholder="Search for Name" title="Type in a name">
   Student Status : 
 <select type="text" name="byClass" id="studentStatus" onchange="studentStatus();" style="width:100px; padding:4px; border-radius:6px;">
