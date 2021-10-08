@@ -1,0 +1,38 @@
+<!--- take snapshot--->
+            <div class="col-md-3">
+                <div id="my_camera"></div>
+                <br/>
+                <input type=button value="Take Snapshot" onClick="take_snapshot()">
+                <input type="hidden" name="image" class="image-tag" id="imgCaptured">
+            </div>
+            <div class="col-md-3">
+                <div id="results">Your captured image will appear here...</div>
+            </div>
+            <!--- take snapshot end html--->
+          <div id="snackbar"></div>  
+            
+            <!--- take snapshot--->
+<script src="js/webcam/webcam.min.js"></script>
+<script language="JavaScript">
+//Toast Function
+function ToastFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+    Webcam.set({
+        width: 280,
+        height: 180,
+        image_format: 'jpeg',
+        jpeg_quality: 90
+    });
+    Webcam.attach( '#my_camera' );
+    function take_snapshot() {
+        Webcam.snap( function(data_uri) {
+            $(".image-tag").val(data_uri);
+            document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+        } );
+    }
+</script>
+<!--- take snapshot end script--->
